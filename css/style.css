@@ -1,4 +1,26 @@
 /********** Template CSS **********/
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Already have this, which is great! */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
 :root {
     --primary: #F3525A;
     --secondary: #F6F6F6;
@@ -109,7 +131,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
     }
 }
@@ -220,7 +242,7 @@ h6,
 }
 
 .testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next{
+.testimonial-carousel .owl-nav .owl-next {
     position: relative;
     margin: 0 5px;
     width: 45px;
@@ -251,4 +273,94 @@ h6,
 
 .blog-item:hover img {
     transform: scale(1.1);
+}
+
+/* =========================================
+   MEDIA QUERIES FOR RESPONSIVENESS
+   ========================================= */
+
+/* For Tablets and smaller desktops (e.g., up to 1024px) */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 20px;
+        /* Reduce space between nav links */
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        /* Slightly smaller font for the main headline */
+    }
+}
+
+
+/* For Mobile Devices (e.g., up to 768px) */
+@media (max-width: 768px) {
+
+    /* --- NAVIGATION --- */
+    /* Here you would typically implement a hamburger menu.
+       For a simpler start, let's stack the links. */
+    .nav-links {
+        display: none;
+        /* Hide the links for now. You'll need JavaScript to show them with a hamburger button */
+        /* A hamburger menu implementation would go here */
+    }
+
+    /* --- HERO SECTION --- */
+    #home {
+        flex-direction: column;
+        /* Stack the text and image vertically */
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+        /* Allow content and image to take full width */
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        /* Add space between the stacked text and image */
+    }
+
+
+    /* --- SERVICES SECTION --- */
+    .service-cards {
+        flex-direction: column;
+        /* Stack the service cards */
+        align-items: center;
+        gap: 30px;
+    }
+
+
+    /* --- ABOUT SECTION --- */
+    #about {
+        flex-direction: column-reverse;
+        /* Stack image and text, reversing to keep image on top */
+        padding: 40px 20px;
+    }
+
+    .about-content,
+    .about-image {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+    }
+
+
+    /* --- CONTACT SECTION --- */
+    #contact .container {
+        flex-direction: column;
+        /* Stack the form and contact info */
+        gap: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+    }
 }
