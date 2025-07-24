@@ -14,11 +14,14 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -35,25 +38,38 @@
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
             <div class="loading-spinner"></div>
-            <p>Loading...</p>
+            <div class="loading-text">
+                <h4>ClinChem Solutions</h4>
+                <p>Loading Excellence...</p>
+            </div>
         </div>
     </div>
 
     <!-- Topbar Start -->
-    <div class="topbar">
+    <div class="topbar d-none d-lg-block">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="topbar-links">
-                        <a href="#" class="topbar-link">FAQs</a>
-                        <a href="#" class="topbar-link">Support</a>
+                        <a href="#" class="topbar-link">
+                            <i class="fas fa-question-circle me-1"></i>
+                            FAQs
+                        </a>
+                        <a href="#" class="topbar-link">
+                            <i class="fas fa-headset me-1"></i>
+                            Support
+                        </a>
+                        <a href="#" class="topbar-link">
+                            <i class="fas fa-shield-alt me-1"></i>
+                            Privacy
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="topbar-contact">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
-                            <span>info@consult.com</span>
+                            <span>info@clinchemsolutions.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
@@ -70,10 +86,16 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="img/logo2.png" alt="ClinChem Solutions" class="brand-logo">
+                <div class="brand-container">
+                    <img src="img/logo2.png" alt="ClinChem Solutions" class="brand-logo">
+                    <div class="brand-text">
+                        <span class="brand-name">ClinChem</span>
+                        <span class="brand-tagline">Solutions</span>
+                    </div>
+                </div>
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
                     <span></span>
                     <span></span>
@@ -84,22 +106,46 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
+                        <a class="nav-link active" href="#home">
+                            <i class="fas fa-home me-1"></i>
+                            Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">
+                            <i class="fas fa-info-circle me-1"></i>
+                            About
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#services">
+                            <i class="fas fa-cogs me-1"></i>
+                            Services
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#features">
+                            <i class="fas fa-star me-1"></i>
+                            Features
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#testimonials">
+                            <i class="fas fa-comments me-1"></i>
+                            Testimonials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope me-1"></i>
+                            Contact
+                        </a>
                     </li>
                 </ul>
-                <a href="#contact" class="btn btn-primary ms-3 cta-btn">Get Started</a>
+                <a href="#contact" class="btn btn-primary ms-3 cta-btn">
+                    <i class="fas fa-calendar-check me-2"></i>
+                    Get Started
+                </a>
             </div>
         </div>
     </nav>
@@ -110,46 +156,116 @@
         <div class="hero-background">
             <div class="hero-slide active" style="background-image: url('img/her03.jpg')"></div>
             <div class="hero-slide" style="background-image: url('img/hero2.jpeg')"></div>
+            <div class="hero-slide" style="background-image: url('img/carousel-1.jpg')"></div>
         </div>
         
         <div class="hero-overlay"></div>
         
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 20%; left: 10%; animation-delay: 0s;">
+                <i class="fas fa-microscope"></i>
+            </div>
+            <div class="floating-element" style="top: 60%; right: 15%; animation-delay: 2s;">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="floating-element" style="top: 30%; right: 25%; animation-delay: 4s;">
+                <i class="fas fa-dna"></i>
+            </div>
+        </div>
+        
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-8">
-                    <div class="hero-content" data-aos="fade-up">
-                        <span class="hero-badge">Clinical Chemistry Consultancy</span>
+                <div class="col-lg-7">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="hero-badge-container">
+                            <span class="hero-badge">
+                                <i class="fas fa-award me-2"></i>
+                                Clinical Chemistry Consultancy
+                            </span>
+                        </div>
+                        
                         <h1 class="hero-title">
-                            Professional <span class="text-primary">Consultation</span>, 
-                            Trusted Care.
+                            Professional <span class="text-gradient">Consultation</span>, 
+                            <br>Trusted <span class="text-gradient">Care</span>.
                         </h1>
+                        
                         <p class="hero-description">
                             Expert insights into clinical chemistry and laboratory diagnostics. 
-                            We bridge the gap between scientific knowledge and real-world health applications.
+                            We bridge the gap between scientific knowledge and real-world health applications 
+                            with personalized guidance and cutting-edge expertise.
                         </p>
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn btn-primary btn-lg me-3">
+                        
+                        <div class="hero-features" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Expert Clinical Chemistry Guidance</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized Student Mentorship</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Metabolic Health Support</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#contact" class="btn btn-primary btn-lg hero-btn-primary">
                                 <i class="fas fa-calendar-check me-2"></i>
                                 Book Consultation
+                                <span class="btn-shine"></span>
                             </a>
-                            <a href="#about" class="btn btn-outline-light btn-lg">
+                            <a href="#about" class="btn btn-outline-light btn-lg hero-btn-secondary">
                                 <i class="fas fa-play me-2"></i>
                                 Learn More
                             </a>
                         </div>
-                        
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-label">Students Helped</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="hero-stats-container" data-aos="fade-left" data-aos-delay="600">
+                        <div class="stats-grid">
+                            <div class="stat-card" data-aos="zoom-in" data-aos-delay="700">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number" data-count="500">0</div>
+                                    <div class="stat-label">Students Helped</div>
+                                </div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">10+</div>
-                                <div class="stat-label">Years Experience</div>
+                            
+                            <div class="stat-card" data-aos="zoom-in" data-aos-delay="800">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number" data-count="10">0</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">98%</div>
-                                <div class="stat-label">Success Rate</div>
+                            
+                            <div class="stat-card" data-aos="zoom-in" data-aos-delay="900">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number" data-count="98">0</div>
+                                    <div class="stat-label">Success Rate</div>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card" data-aos="zoom-in" data-aos-delay="1000">
+                                <div class="stat-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="stat-number" data-count="24">0</div>
+                                    <div class="stat-label">Awards Won</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,20 +275,20 @@
         
         <!-- Hero Navigation -->
         <div class="hero-nav">
-            <button class="hero-nav-btn prev" onclick="changeSlide(-1)">
+            <button class="hero-nav-btn prev" onclick="changeSlide(-1)" aria-label="Previous slide">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <button class="hero-nav-btn next" onclick="changeSlide(1)">
+            <button class="hero-nav-btn next" onclick="changeSlide(1)" aria-label="Next slide">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1200">
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
             </div>
-            <span>Scroll Down</span>
+            <span>Scroll to Explore</span>
         </div>
     </section>
     <!-- Hero Section End -->
@@ -181,80 +297,112 @@
     <section id="about" class="about-section">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
                     <div class="about-content">
                         <div class="section-header">
-                            <span class="section-badge">About Us</span>
+                            <span class="section-badge">
+                                <i class="fas fa-info-circle me-2"></i>
+                                About Us
+                            </span>
                             <h2 class="section-title">
-                                Welcome To <span class="text-primary">ClinChem Solutions</span>
+                                Welcome To <span class="text-gradient">ClinChem Solutions</span>
                             </h2>
-                            <h4 class="section-subtitle">A Commitment to Excellence</h4>
+                            <div class="title-underline"></div>
+                            <h4 class="section-subtitle">A Commitment to Excellence in Clinical Chemistry</h4>
                         </div>
                         
                         <p class="about-text">
-                            With years of experience, we are dedicated to educating students and supporting
-                            individuals dealing with metabolic disorders by providing expert insights into clinical 
-                            chemistry and laboratory diagnostics. Our goal is to bridge the gap between scientific 
-                            knowledge and real-world health applications.
+                            With years of experience in clinical chemistry and laboratory diagnostics, we are dedicated to 
+                            educating students and supporting individuals dealing with metabolic disorders. Our mission is to 
+                            bridge the gap between scientific knowledge and real-world health applications through expert 
+                            consultation and personalized guidance.
                         </p>
                         
                         <div class="about-features">
-                            <div class="feature-item">
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
                                 <div class="feature-icon">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-microscope"></i>
                                 </div>
-                                <span>Expert Clinical Chemistry Guidance</span>
+                                <div class="feature-content">
+                                    <h6>Expert Clinical Chemistry Guidance</h6>
+                                    <p>Professional insights from experienced clinical chemists</p>
+                                </div>
                             </div>
-                            <div class="feature-item">
+                            
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
                                 <div class="feature-icon">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-graduation-cap"></i>
                                 </div>
-                                <span>Personalized Student Mentorship</span>
+                                <div class="feature-content">
+                                    <h6>Personalized Student Mentorship</h6>
+                                    <p>One-on-one guidance tailored to individual learning needs</p>
+                                </div>
                             </div>
-                            <div class="feature-item">
+                            
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
                                 <div class="feature-icon">
-                                    <i class="fas fa-check"></i>
+                                    <i class="fas fa-heart-pulse"></i>
                                 </div>
-                                <span>Metabolic Health Support</span>
+                                <div class="feature-content">
+                                    <h6>Metabolic Health Support</h6>
+                                    <p>Comprehensive support for metabolic disorder management</p>
+                                </div>
                             </div>
                         </div>
                         
-                        <a href="#contact" class="btn btn-primary btn-lg mt-4">
-                            Get A Quote
-                            <i class="fas fa-arrow-right ms-2"></i>
-                        </a>
+                        <div class="about-cta" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#contact" class="btn btn-primary btn-lg">
+                                <i class="fas fa-arrow-right me-2"></i>
+                                Get A Quote
+                            </a>
+                            <div class="experience-badge">
+                                <div class="experience-number">10+</div>
+                                <div class="experience-text">Years of<br>Excellence</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="about-cards">
-                        <div class="about-card">
-                            <div class="card-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="card-content">
-                                <h5>Team Expertise</h5>
-                                <p>Our team is composed of highly experienced clinical chemists, medical professionals, and educators dedicated to bridging the gap between scientific knowledge and real-world application.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="about-card">
-                            <div class="card-icon">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <div class="card-content">
-                                <h5>Our Mission</h5>
-                                <p>To empower students and individuals struggling with metabolic diseases by providing expert clinical chemistry insights, education, and personalized guidance.</p>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="about-visual">
+                        <div class="about-image-container">
+                            <img src="img/handshake.jpg" alt="About ClinChem Solutions" class="about-main-image">
+                            <div class="image-overlay">
+                                <div class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                    <i class="fas fa-play"></i>
+                                </div>
                             </div>
                         </div>
                         
-                        <div class="about-card">
-                            <div class="card-icon">
-                                <i class="fas fa-eye"></i>
+                        <div class="about-cards">
+                            <div class="about-card" data-aos="slide-up" data-aos-delay="200">
+                                <div class="card-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Team Expertise</h5>
+                                    <p>Highly experienced clinical chemists and medical professionals</p>
+                                </div>
                             </div>
-                            <div class="card-content">
-                                <h5>Our Vision</h5>
-                                <p>To become a leading hub for clinical chemistry education and metabolic health awareness, empowering students and individuals with the knowledge and tools they need.</p>
+                            
+                            <div class="about-card" data-aos="slide-up" data-aos-delay="300">
+                                <div class="card-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Our Mission</h5>
+                                    <p>Empowering students and individuals with expert clinical chemistry insights</p>
+                                </div>
+                            </div>
+                            
+                            <div class="about-card" data-aos="slide-up" data-aos-delay="400">
+                                <div class="card-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h5>Our Vision</h5>
+                                    <p>Leading hub for clinical chemistry education and metabolic health awareness</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,10 +416,14 @@
     <section id="services" class="services-section">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-badge">Our Services</span>
-                <h2 class="section-title">What We Offer</h2>
+                <span class="section-badge">
+                    <i class="fas fa-cogs me-2"></i>
+                    Our Services
+                </span>
+                <h2 class="section-title">What We <span class="text-gradient">Offer</span></h2>
+                <div class="title-underline mx-auto"></div>
                 <p class="section-description">
-                    Comprehensive clinical chemistry consultation and educational services tailored to your needs
+                    Comprehensive clinical chemistry consultation and educational services tailored to your specific needs
                 </p>
             </div>
             
@@ -283,8 +435,13 @@
                         </div>
                         <div class="service-content">
                             <h4>Clinical Chemistry Tutoring & Mentorship</h4>
-                            <p>One-on-one or group mentorship for students seeking deeper insights into biochemical analysis and medical diagnostics.</p>
-                            <a href="#" class="service-link">
+                            <p>One-on-one or group mentorship for students seeking deeper insights into biochemical analysis and medical diagnostics. Our expert tutors provide comprehensive guidance.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Personalized learning plans</li>
+                                <li><i class="fas fa-check"></i> Expert guidance</li>
+                                <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                            </ul>
+                            <a href="#contact" class="service-link">
                                 Learn More <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -298,8 +455,13 @@
                         </div>
                         <div class="service-content">
                             <h4>Research & Academic Support</h4>
-                            <p>Assistance with scientific writing, literature reviews, and clinical chemistry research projects.</p>
-                            <a href="#" class="service-link">
+                            <p>Comprehensive assistance with scientific writing, literature reviews, and clinical chemistry research projects. We help you achieve academic excellence.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Research methodology</li>
+                                <li><i class="fas fa-check"></i> Scientific writing</li>
+                                <li><i class="fas fa-check"></i> Literature reviews</li>
+                            </ul>
+                            <a href="#contact" class="service-link">
                                 Learn More <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -312,9 +474,14 @@
                             <i class="fas fa-heart"></i>
                         </div>
                         <div class="service-content">
-                            <h4>Individual Counseling and Mental Wellness</h4>
-                            <p>One-on-one therapy sessions focused on stress management, anxiety, depression, and personal growth.</p>
-                            <a href="#" class="service-link">
+                            <h4>Individual Counseling & Mental Wellness</h4>
+                            <p>Professional one-on-one therapy sessions focused on stress management, anxiety, depression, and personal growth for overall well-being.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Stress management</li>
+                                <li><i class="fas fa-check"></i> Anxiety support</li>
+                                <li><i class="fas fa-check"></i> Personal growth</li>
+                            </ul>
+                            <a href="#contact" class="service-link">
                                 Learn More <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -328,8 +495,13 @@
                         </div>
                         <div class="service-content">
                             <h4>Workshops & Webinars</h4>
-                            <p>Interactive sessions covering the latest advancements in clinical chemistry and metabolic health management.</p>
-                            <a href="#" class="service-link">
+                            <p>Interactive educational sessions covering the latest advancements in clinical chemistry and metabolic health management with industry experts.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> Interactive sessions</li>
+                                <li><i class="fas fa-check"></i> Latest advancements</li>
+                                <li><i class="fas fa-check"></i> Expert instructors</li>
+                            </ul>
+                            <a href="#contact" class="service-link">
                                 Learn More <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -344,8 +516,15 @@
     <section id="features" class="features-section">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up">
-                <span class="section-badge">Why Choose Us</span>
-                <h2 class="section-title">Excellence in Every Aspect</h2>
+                <span class="section-badge">
+                    <i class="fas fa-star me-2"></i>
+                    Why Choose Us
+                </span>
+                <h2 class="section-title">Excellence in <span class="text-gradient">Every Aspect</span></h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">
+                    Discover what makes us the preferred choice for clinical chemistry consultation and education
+                </p>
             </div>
             
             <div class="row g-5 align-items-center">
@@ -357,7 +536,7 @@
                             </div>
                             <div class="feature-content">
                                 <h5>Personalized & Confidential Services</h5>
-                                <p>Every client is unique, and so is our approach. We offer one-on-one consultations with professionalism and discretion.</p>
+                                <p>Every client is unique, and so is our approach. We offer one-on-one consultations with complete professionalism and discretion.</p>
                             </div>
                         </div>
                         
@@ -367,7 +546,7 @@
                             </div>
                             <div class="feature-content">
                                 <h5>Convenient & Flexible Access</h5>
-                                <p>Online consultations, virtual mentorship, and flexible scheduling to fit your lifestyle.</p>
+                                <p>Online consultations, virtual mentorship, and flexible scheduling options designed to fit seamlessly into your lifestyle.</p>
                             </div>
                         </div>
                         
@@ -377,7 +556,7 @@
                             </div>
                             <div class="feature-content">
                                 <h5>Passion for Impact & Growth</h5>
-                                <p>We're passionate about empowering students, improving healthcare understanding, and supporting mental well-being.</p>
+                                <p>We're passionate about empowering students, improving healthcare understanding, and supporting mental well-being in our community.</p>
                             </div>
                         </div>
                     </div>
@@ -385,10 +564,19 @@
                 
                 <div class="col-lg-4" data-aos="fade-up">
                     <div class="features-image">
-                        <img src="img/feature.jpg" alt="Features" class="img-fluid rounded-4">
-                        <div class="image-overlay">
-                            <div class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
-                                <i class="fas fa-play"></i>
+                        <div class="image-container">
+                            <img src="img/feature.jpg" alt="Features" class="img-fluid">
+                            <div class="image-overlay">
+                                <div class="play-button" data-bs-toggle="modal" data-bs-target="#videoModal">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-badge">
+                            <div class="badge-content">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certified Excellence</span>
                             </div>
                         </div>
                     </div>
@@ -403,6 +591,9 @@
                             <div class="stat-content">
                                 <h3>100%</h3>
                                 <p>Happy Clients</p>
+                                <div class="stat-progress">
+                                    <div class="progress-bar" style="width: 100%"></div>
+                                </div>
                             </div>
                         </div>
                         
@@ -413,6 +604,9 @@
                             <div class="stat-content">
                                 <h3>Expert</h3>
                                 <p>Professional Advisors</p>
+                                <div class="stat-progress">
+                                    <div class="progress-bar" style="width: 95%"></div>
+                                </div>
                             </div>
                         </div>
                         
@@ -423,6 +617,9 @@
                             <div class="stat-content">
                                 <h3>24/7</h3>
                                 <p>Customer Support</p>
+                                <div class="stat-progress">
+                                    <div class="progress-bar" style="width: 100%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -432,112 +629,69 @@
     </section>
     <!-- Features Section End -->
 
-    <!-- Contact Form Section Start -->
-    <section id="contact" class="contact-form-section">
-        <div class="container">
-            <div class="row g-0 rounded-4 overflow-hidden shadow-lg">
-                <div class="col-lg-6">
-                    <div class="contact-form-content">
-                        <div class="section-header" data-aos="fade-up">
-                            <span class="section-badge">Get In Touch</span>
-                            <h2 class="section-title">Leave Your Request</h2>
-                            <p class="section-description">
-                                Simply fill out the consultation request form with your details and specific concerns, 
-                                and our expert team will get back to you with personalized recommendations.
-                            </p>
-                        </div>
-                        
-                        <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="fullName">Full Name</label>
-                                        <input type="text" class="form-control" id="fullName" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="email">Email Address</label>
-                                        <input type="email" class="form-control" id="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="subject">Subject</label>
-                                        <input type="text" class="form-control" id="subject" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="service">Service Type</label>
-                                        <select class="form-control" id="service" required>
-                                            <option value="">Select a service</option>
-                                            <option value="tutoring">Clinical Chemistry Tutoring</option>
-                                            <option value="research">Research Support</option>
-                                            <option value="counseling">Mental Wellness</option>
-                                            <option value="workshop">Workshops</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="message">Brief Description</label>
-                                        <textarea class="form-control" id="message" rows="4" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100">
-                                        <i class="fas fa-paper-plane me-2"></i>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="contact-image">
-                        <img src="img/handshake.jpg" alt="Contact Us" class="img-fluid h-100 object-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Form Section End -->
-
     <!-- Testimonials Section Start -->
-    <section class="testimonials-section">
+    <section id="testimonials" class="testimonials-section">
         <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">
+                    <i class="fas fa-comments me-2"></i>
+                    Testimonials
+                </span>
+                <h2 class="section-title">What Our <span class="text-gradient">Clients Say</span></h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">
+                    Real feedback from our satisfied clients who have experienced our exceptional services
+                </p>
+            </div>
+            
             <div class="row g-0 align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right">
                     <div class="testimonials-image">
                         <img src="img/client2.png" alt="Client Testimonials" class="img-fluid">
+                        <div class="testimonial-badge">
+                            <div class="badge-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span>5.0 Rating</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
-                    <div class="testimonials-content">
-                        <div class="section-header" data-aos="fade-up">
-                            <span class="section-badge">Testimonials</span>
-                            <h2 class="section-title">What Our Clients Say</h2>
-                        </div>
-                        
-                        <div class="testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonials-content" data-aos="fade-left">
+                        <div class="testimonials-carousel owl-carousel">
                             <div class="testimonial-item">
                                 <div class="testimonial-content">
                                     <div class="quote-icon">
                                         <i class="fas fa-quote-left"></i>
                                     </div>
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
                                     <p class="testimonial-text">
                                         "The clinical chemistry tutoring I received was exceptional. The personalized approach 
-                                        helped me understand complex concepts and excel in my studies. Highly recommended!"
+                                        helped me understand complex concepts and excel in my studies. The expertise and dedication 
+                                        of the team is truly remarkable. Highly recommended!"
                                     </p>
                                     <div class="testimonial-author">
                                         <img src="img/testimonial-1.jpg" alt="Client" class="author-image">
                                         <div class="author-info">
                                             <h6>Sarah Johnson</h6>
                                             <span>Medical Student</span>
+                                            <div class="author-location">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                University of Nairobi
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -548,15 +702,58 @@
                                     <div class="quote-icon">
                                         <i class="fas fa-quote-left"></i>
                                     </div>
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
                                     <p class="testimonial-text">
                                         "Professional, knowledgeable, and caring. The support I received for my metabolic 
-                                        health concerns was invaluable. Thank you for the excellent service!"
+                                        health concerns was invaluable. The team's expertise in clinical chemistry made all 
+                                        the difference in my treatment journey. Thank you for the excellent service!"
                                     </p>
                                     <div class="testimonial-author">
                                         <img src="img/testimonial-2.jpg" alt="Client" class="author-image">
                                         <div class="author-info">
                                             <h6>Michael Chen</h6>
                                             <span>Healthcare Professional</span>
+                                            <div class="author-location">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                Mombasa Hospital
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="testimonial-item">
+                                <div class="testimonial-content">
+                                    <div class="quote-icon">
+                                        <i class="fas fa-quote-left"></i>
+                                    </div>
+                                    <div class="rating mb-3">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="testimonial-text">
+                                        "The research support I received was outstanding. From literature reviews to 
+                                        methodology guidance, every aspect was handled with utmost professionalism. 
+                                        This service truly accelerated my academic progress."
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <img src="img/team-1.jpg" alt="Client" class="author-image">
+                                        <div class="author-info">
+                                            <h6>Dr. Amina Hassan</h6>
+                                            <span>Research Scholar</span>
+                                            <div class="author-location">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                KEMRI Institute
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -569,26 +766,198 @@
     </section>
     <!-- Testimonials Section End -->
 
+    <!-- Contact Form Section Start -->
+    <section id="contact" class="contact-form-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-badge">
+                    <i class="fas fa-envelope me-2"></i>
+                    Get In Touch
+                </span>
+                <h2 class="section-title">Leave Your <span class="text-gradient">Request</span></h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">
+                    Ready to start your journey? Fill out our consultation request form and our expert team will get back to you with personalized recommendations.
+                </p>
+            </div>
+            
+            <div class="row g-0 justify-content-center">
+                <div class="col-lg-10">
+                    <div class="contact-container">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="contact-form-content">
+                                    <div class="contact-info-cards">
+                                        <div class="info-card" data-aos="slide-right" data-aos-delay="100">
+                                            <div class="info-icon">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <div class="info-content">
+                                                <h6>Our Location</h6>
+                                                <p>Mombasa, Kenya</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="info-card" data-aos="slide-right" data-aos-delay="200">
+                                            <div class="info-icon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <div class="info-content">
+                                                <h6>Call Us</h6>
+                                                <p>+254 711 882 339</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="info-card" data-aos="slide-right" data-aos-delay="300">
+                                            <div class="info-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="info-content">
+                                                <h6>Email Us</h6>
+                                                <p>info@clinchemsolutions.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <form class="contact-form" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="form-header">
+                                            <h4>Send us a Message</h4>
+                                            <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                                        </div>
+                                        
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="fullName">
+                                                        <i class="fas fa-user me-2"></i>
+                                                        Full Name
+                                                    </label>
+                                                    <input type="text" class="form-control" id="fullName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="email">
+                                                        <i class="fas fa-envelope me-2"></i>
+                                                        Email Address
+                                                    </label>
+                                                    <input type="email" class="form-control" id="email" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="phone">
+                                                        <i class="fas fa-phone me-2"></i>
+                                                        Phone Number
+                                                    </label>
+                                                    <input type="tel" class="form-control" id="phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="service">
+                                                        <i class="fas fa-cogs me-2"></i>
+                                                        Service Type
+                                                    </label>
+                                                    <select class="form-control" id="service" required>
+                                                        <option value="">Select a service</option>
+                                                        <option value="tutoring">Clinical Chemistry Tutoring</option>
+                                                        <option value="research">Research Support</option>
+                                                        <option value="counseling">Mental Wellness</option>
+                                                        <option value="workshop">Workshops & Webinars</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="subject">
+                                                        <i class="fas fa-tag me-2"></i>
+                                                        Subject
+                                                    </label>
+                                                    <input type="text" class="form-control" id="subject" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label for="message">
+                                                        <i class="fas fa-comment me-2"></i>
+                                                        Brief Description
+                                                    </label>
+                                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                                    <i class="fas fa-paper-plane me-2"></i>
+                                                    Send Message
+                                                    <span class="btn-shine"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="contact-image">
+                                    <img src="img/handshake.jpg" alt="Contact Us" class="img-fluid">
+                                    <div class="contact-overlay">
+                                        <div class="overlay-content">
+                                            <h4>Ready to Get Started?</h4>
+                                            <p>Join hundreds of satisfied clients who have transformed their understanding of clinical chemistry with our expert guidance.</p>
+                                            <div class="contact-features">
+                                                <div class="contact-feature">
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <span>Free Initial Consultation</span>
+                                                </div>
+                                                <div class="contact-feature">
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <span>24/7 Support Available</span>
+                                                </div>
+                                                <div class="contact-feature">
+                                                    <i class="fas fa-check-circle"></i>
+                                                    <span>Personalized Solutions</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section End -->
+
     <!-- Footer Start -->
     <footer class="footer">
         <!-- Newsletter Section -->
         <div class="newsletter-section">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h3 class="newsletter-title">Stay Updated!</h3>
-                        <p class="newsletter-description">
-                            Subscribe to our newsletter for the latest insights in clinical chemistry and health updates
-                        </p>
-                        <form class="newsletter-form">
-                            <div class="input-group">
-                                <input type="email" class="form-control" placeholder="Enter your email address" required>
-                                <button class="btn btn-dark" type="submit">
-                                    <i class="fas fa-paper-plane"></i>
-                                    Subscribe
-                                </button>
+                    <div class="col-lg-8 text-center" data-aos="fade-up">
+                        <div class="newsletter-content">
+                            <div class="newsletter-icon">
+                                <i class="fas fa-paper-plane"></i>
                             </div>
-                        </form>
+                            <h3 class="newsletter-title">Stay Updated with Latest Insights!</h3>
+                            <p class="newsletter-description">
+                                Subscribe to our newsletter for the latest insights in clinical chemistry, health updates, 
+                                and exclusive educational content delivered directly to your inbox.
+                            </p>
+                            <form class="newsletter-form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter your email address" required>
+                                    <button class="btn btn-dark" type="submit">
+                                        <i class="fas fa-paper-plane me-2"></i>
+                                        Subscribe
+                                    </button>
+                                </div>
+                                <small class="form-text">We respect your privacy. Unsubscribe at any time.</small>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -598,13 +967,44 @@
         <div class="footer-content">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-brand">
+                                <img src="img/logo2.png" alt="ClinChem Solutions" class="footer-logo">
+                                <h5 class="brand-name">ClinChem Solutions</h5>
+                            </div>
+                            <p class="footer-description">
+                                Expert insights into clinical chemistry and laboratory diagnostics. 
+                                We bridge the gap between scientific knowledge and real-world health applications.
+                            </p>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-6">
                         <div class="footer-widget">
                             <h5 class="widget-title">Quick Links</h5>
                             <ul class="footer-links">
                                 <li><a href="#home">Home</a></li>
                                 <li><a href="#about">About Us</a></li>
                                 <li><a href="#services">Our Services</a></li>
+                                <li><a href="#features">Features</a></li>
                                 <li><a href="#contact">Contact Us</a></li>
                             </ul>
                         </div>
@@ -612,12 +1012,13 @@
                     
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget">
-                            <h5 class="widget-title">Services</h5>
+                            <h5 class="widget-title">Our Services</h5>
                             <ul class="footer-links">
-                                <li><a href="#">Clinical Chemistry Tutoring</a></li>
-                                <li><a href="#">Research Support</a></li>
-                                <li><a href="#">Mental Wellness</a></li>
-                                <li><a href="#">Workshops</a></li>
+                                <li><a href="#services">Clinical Chemistry Tutoring</a></li>
+                                <li><a href="#services">Research Support</a></li>
+                                <li><a href="#services">Mental Wellness Counseling</a></li>
+                                <li><a href="#services">Workshops & Webinars</a></li>
+                                <li><a href="#services">Academic Writing Support</a></li>
                             </ul>
                         </div>
                     </div>
@@ -628,36 +1029,32 @@
                             <div class="contact-info">
                                 <div class="contact-item">
                                     <i class="fas fa-map-marker-alt"></i>
-                                    <span>Mombasa, Kenya</span>
+                                    <div class="contact-details">
+                                        <strong>Address</strong>
+                                        <span>Mombasa, Kenya</span>
+                                    </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-envelope"></i>
-                                    <span>info@gmail.com</span>
+                                    <div class="contact-details">
+                                        <strong>Email</strong>
+                                        <span>info@clinchemsolutions.com</span>
+                                    </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fas fa-phone"></i>
-                                    <span>+254 711 882 339</span>
+                                    <div class="contact-details">
+                                        <strong>Phone</strong>
+                                        <span>+254 711 882 339</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget">
-                            <h5 class="widget-title">Follow Us</h5>
-                            <div class="social-links">
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" class="social-link">
-                                    <i class="fab fa-youtube"></i>
-                                </a>
+                                <div class="contact-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div class="contact-details">
+                                        <strong>Hours</strong>
+                                        <span>Mon - Fri: 8AM - 6PM</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -675,9 +1072,11 @@
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <p class="designed-by">
-                            Designed by <a href="https://helcon.xyz">HELCON</a>
-                        </p>
+                        <div class="footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -686,17 +1085,17 @@
     <!-- Footer End -->
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <!-- Video Modal -->
-    <div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">About Our Services</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title" id="videoModalLabel">About Our Services</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9">
